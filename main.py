@@ -10,9 +10,12 @@ os.makedirs("audio", exist_ok=True)
 
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"message": "Dentary backend is running"}
+
 def save_audio(audio_bytes, filename):
     path = f"./audio/{filename}"
-    os.makedirs("audio", exist_ok=True)
     with wave.open(path, 'wb') as wf:
         wf.setnchannels(1)
         wf.setsampwidth(2)
