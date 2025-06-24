@@ -1,12 +1,9 @@
---only-binary=:all:
-
 fastapi==0.110.0
 uvicorn==0.29.0
 python-dotenv==1.0.1
 firebase-admin==6.5.0
-transformers==4.30.2
-tokenizers==0.20.2
+transformers==4.36.2
+# tokenizers 생략: transformers가 자체 fallback 사용
 pyannote.audio==3.1.1
-matplotlib==3.9.4
-pillow==10.4.0
-torch==2.5.1
+matplotlib==3.10.0
+pillow==11.2.1
