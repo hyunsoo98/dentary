@@ -2,7 +2,7 @@ services:
   - type: web
     name: fastapi-backend
     env: python
-    pythonVersion: 3.11
+    pythonVersion: 3.13  
     buildCommand: |
       pip install --upgrade pip
       pip install --no-cache-dir -r requirements.txt
