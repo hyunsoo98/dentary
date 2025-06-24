@@ -1,0 +1,4 @@
+buildCommand: |
+  pip install --upgrade pip
+  pip install --no-deps -r requirements.txt
+  pip install torch==2.5.1+cpu --extra-index-url https://download.pytorch.org/whl/cpu
