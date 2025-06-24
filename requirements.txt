@@ -10,7 +10,7 @@ transformers==4.30.2
 tokenizers==0.20.2
 
 pyannote.audio==3.1.1
-matplotlib==3.7.1
+matplotlib==3.10.0
 
 --only-binary :all:
 pillow==10.3.0
