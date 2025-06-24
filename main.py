@@ -2,9 +2,10 @@ from fastapi import FastAPI, WebSocket
 import uuid
 import wave
 import os
-from whisper_stt import transcribe
-from diarization import run_diarization
-from firebase_client import save_transcription
+from api.route.whisper_stt import transcribe
+from api.route.diarization import run_diarization
+from api.preprocessing.firebase_client import save_transcription
+
 
 os.makedirs("audio", exist_ok=True)
 
