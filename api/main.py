@@ -6,6 +6,8 @@ from whisper_stt import transcribe
 from diarization import run_diarization
 from firebase_client import save_transcription
 
+os.makedirs("audio", exist_ok=True)
+
 app = FastAPI()
 
 def save_audio(audio_bytes, filename):
