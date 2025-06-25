@@ -2,10 +2,15 @@ from fastapi import FastAPI, WebSocket
 import uuid
 import wave
 import os
+import sys
+
+# Ensure proper import path for Render deployment
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 from api.route.whisper_stt import transcribe
 from api.route.diarization import run_diarization
 from api.preprocessing.firebase_client import save_transcription
-
 
 os.makedirs("audio", exist_ok=True)
 
